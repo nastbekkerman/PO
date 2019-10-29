@@ -228,7 +228,7 @@ private:
 		for (int i = 0; i < head + 1; i++) {
 			if (arrayClothes[i].tupeVClothes == type&& arrayClothes[i].sex==sex) {
 
-				sp += "item number " + std::to_string(i) + " Òèï: " + type + " price: ";
+				sp += "item number " + std::to_string(i) + " Type: " + type + " price: ";
 				sp += std::to_string(arrayClothes[i].costClothes);
 				sp += "\n";
 				j++;
