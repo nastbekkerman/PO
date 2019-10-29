@@ -179,19 +179,19 @@ public:
 		}
 		if (sp != "") {
 			char ch;
-			cout << "Вы хоите что то купить? Д/Н" << endl;
+			cout << "do you want to buy something? Y/N" << endl;
 			cin >> ch;
 			if (ch == 'Y' || ch == 'y') {
-				cout << "Выберите товар: " << endl;
+				cout << "select product : " << endl;
 				cin >> chouse;
 				delClothes(chouse);
-				cout << "Благодарим за покупку)))\n";
-			}else cout << "досвидания\n";
+				cout << "thank you for your purchase)))\n";
+			}else cout << "goodbye\n";
 		}
 
 	}
 	void showMoney() {
-		cout << "дeнег в кассе " << bank.showMoney() << endl;
+		cout << "money at the checkout " << bank.showMoney() << endl;
 	}
 	void showCloths() {
 
@@ -228,13 +228,13 @@ private:
 		for (int i = 0; i < head + 1; i++) {
 			if (arrayClothes[i].tupeVClothes == type&& arrayClothes[i].sex==sex) {
 
-				sp += "Товар под номером " + std::to_string(i) + " Тип: " + type + " цена: ";
+				sp += "item number " + std::to_string(i) + " Тип: " + type + " price: ";
 				sp += std::to_string(arrayClothes[i].costClothes);
 				sp += "\n";
 				j++;
 			}
 		}
-		if (sp == "") sp = "товар не найден";
+		if (sp == "") sp = "product not found";
 		return sp;
 	}
 	Bank bank;
